@@ -18,7 +18,7 @@ An open-source Blender add-on that brings Google's Gemini into the 3D Viewport. 
 
 ## Requirements
 
-- Blender 3.2 or newer (automated tests run on 4.2 LTS, 4.5 LTS, 5.0 and 5.3)
+- Blender 3.2 or newer (tested on 4.2 LTS, 4.5 LTS, 5.0 and 5.3)
 - A Gemini API key (the free tier works)
 
 ## Installation
@@ -66,17 +66,6 @@ An open-source Blender add-on that brings Google's Gemini into the 3D Viewport. 
 ## ⚠️ Security note
 
 This add-on executes AI-generated Python with full Blender permissions — there is no sandbox. Don't use it on files or machines where you can't afford surprises, and check the generated code in the Text Editor when in doubt. Keys entered in the preferences are stored in plain text in `userpref.blend`; use the `GEMINI_API_KEY` environment variable if that matters to you.
-
-## Development
-
-The test suite runs the add-on inside headless Blender against a local mock of the Gemini API, so it needs no API key:
-
-```bash
-python3.13 -m pip install bpy        # Blender 5.x as a Python module (Python 3.11 -> Blender 4.x)
-python3.13 tests/test_addon.py
-# or with a regular Blender install:
-blender --background --factory-startup --python tests/test_addon.py
-```
 
 ## Changelog
 
