@@ -2,6 +2,10 @@
 
 An open-source Blender add-on that brings Google's Gemini into the 3D Viewport. Describe what you want in plain language — the add-on asks Gemini for Blender Python, runs it, and if the code fails, rolls back what it created and lets Gemini fix its own code.
 
+## Demo video
+
+https://github.com/user-attachments/assets/4ad49fb5-1920-42cf-bbe1-fd7672643d21
+
 ## Features
 
 - **Natural language to code** — objects, materials, modifiers, animation, scene setup from a text prompt.
@@ -15,14 +19,6 @@ An open-source Blender add-on that brings Google's Gemini into the 3D Viewport. 
 - **Model picker** — *Test Connection* checks your key and model and lists every Gemini text model your key can use.
 - **Code review** — every generated script is saved to the Text Editor (`gemini_last_code.py`) and printed to the system console.
 - Respects Blender's **Allow Online Access** setting.
-
-
-## Demo video
-
-
-https://github.com/user-attachments/assets/d088070a-e2d3-4d24-a7f2-2e73e9d7ce77
-
-
 
 ## Requirements
 
