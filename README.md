@@ -16,6 +16,14 @@ An open-source Blender add-on that brings Google's Gemini into the 3D Viewport. 
 - **Code review** — every generated script is saved to the Text Editor (`gemini_last_code.py`) and printed to the system console.
 - Respects Blender's **Allow Online Access** setting.
 
+
+## Demo video
+
+
+https://github.com/user-attachments/assets/d088070a-e2d3-4d24-a7f2-2e73e9d7ce77
+
+
+
 ## Requirements
 
 - Blender 3.2 or newer (tested on 4.2 LTS, 4.5 LTS, 5.0 and 5.3)
