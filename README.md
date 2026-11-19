@@ -31,6 +31,8 @@ An open-source Blender add-on that brings Google's Gemini into the 3D Viewport. 
 4. Expand the add-on, paste your **API Key** and press **Test Connection**.
 5. Blender 4.2+: make sure `Edit > Preferences > System > Network > Allow Online Access` is enabled.
 
+> **Upgrading from version 1.x – 2.1?** Those were installed from a file called `Gemini_for_blender*.py`, so Blender keeps them as a separate add-on next to this one. Remove the old *Gemini AI Assistant (Pro)* entry with version 1.x – 2.1 in `Edit > Preferences > Add-ons` first — otherwise the two copies fight over the same panel and you may keep seeing the old one.
+
 ## Getting an API key
 
 1. Open [Google AI Studio](https://aistudio.google.com/).
@@ -79,6 +81,7 @@ blender --background --factory-startup --python tests/test_addon.py
 ## Changelog
 
 ### 2.3.0
+- **Fixed:** `HTTP Error 404: Not Found` on every request ([#1](https://github.com/B-Evtimov/GeminiInBlender/issues/1)) — versions up to 2.1 had the retired `gemini-1.5-flash` model hard-coded. The model has been a setting since 2.2, and *Test Connection* now lists the models your key can use.
 - **Fixed:** an auto-fix retry ran on top of the failed attempt, so everything it had created was duplicated (e.g. 10 rocks instead of 5). Failed attempts are now rolled back first.
 - **Fixed:** opening or creating a file while a request was running left the add-on stuck on "AI is working" until Blender was restarted.
 - **Fixed:** undo followed by redo of an AI step lost its chat-history entry.
